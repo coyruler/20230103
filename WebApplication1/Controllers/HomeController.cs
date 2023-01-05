@@ -36,7 +36,11 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult CallCkeckName()
+		public IActionResult EmployeeManage()
+		{
+			return View();
+		}
+		public IActionResult CallCkeckName()
         {
             return View();
         }

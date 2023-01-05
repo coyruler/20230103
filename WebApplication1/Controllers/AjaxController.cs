@@ -5,7 +5,7 @@ namespace WebApplication1.Controllers
 {
     public class AjaxController : Controller
     {
-        NorthwindContext _context = null;
+        public readonly NorthwindContext _context = null;
         public AjaxController(NorthwindContext context)
         {
             _context = context;

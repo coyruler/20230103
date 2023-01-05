@@ -25,5 +25,33 @@
                 alert(error.responseText);
             });
         }
+        function jQueryGetCallGreetAsync() {
+            var p = encodeURI("Name=alln");
+            $("#Progress").show();
+            $.ajax({
+                type: "GET",
+                url: "https://localhost:7281/Ajax/Greet?" + p
+            }).done(function (data) {
+                $("#MyDiv").text(data);
+                $("#Progress").hide();
+            }).fail(function (error) {
+                alert(error.responseText);
+            });
+        }
+        function jQuerPostCallGreetAsync() {
+            $("#Progress").show();
+            $.ajax({
+                type: "POST",
+                data:{
+                    Name:"alln"
+                },
+                url: "https://localhost:7281/Ajax/Greet",
+            }).done(function (data) {
+                $("#MyDiv").text(data);
+                $("#Progress").hide();
+            }).fail(function (error) {
+                alert(error.responseText);
+            });
+        }
     </script>
 }
